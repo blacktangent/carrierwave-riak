@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.add_dependency "carrierwave"
   s.add_dependency "riak-client", "~> 1.0"
 
-  s.add_development_dependency "rails", "~> 3.0"
+  s.add_development_dependency "rails", "~> 5.1"
   s.add_development_dependency "rspec", "~> 2.13"
 end

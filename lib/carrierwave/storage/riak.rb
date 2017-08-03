@@ -54,6 +54,7 @@ module CarrierWave
           @bucket = bucket
           @key = key
           @base = base
+          @uploader.key = key
         end
 
         ##

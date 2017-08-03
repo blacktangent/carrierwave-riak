@@ -6,6 +6,10 @@ describe CarrierWave::Storage::Riak::File do
   let(:bucket) { 'bucket_name' }
   let(:key) { 'the_key.txt' }
 
+  before do
+    allow(uploader).to receive('key=')
+  end
+
   subject {
     CarrierWave::Storage::Riak::File.new(uploader, base, bucket, key)
   }

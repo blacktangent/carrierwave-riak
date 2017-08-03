@@ -14,7 +14,8 @@ module CarrierWave
 
         def updatemodel(file)
           if model.read_attribute(:"#{self.mounted_as}").nil? || model.read_attribute(:"#{self.mounted_as}") != self.key
-            model.update_attribute(:"#{self.mounted_as}", self.key)
+            model.write_attribute(:"#{self.mounted_as}", self.key)
+            model.save(validate: false)
           end
         end
       end
